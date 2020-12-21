@@ -1,0 +1,136 @@
+.skill {
+    padding: ($gap / 2) ($gap / 2) ($gap * 2);
+    @include sm {
+       padding: $gap / 2;
+
+    }
+
+    &-container {
+      grid-gap: $gap / 2;
+      display: grid;
+      grid-auto-rows: calc(33.333vh - 13.333px);
+      @include lg-min {
+         grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6" ;
+         grid-template-columns: repeat(4, 1fr);
+         }
+      @include lg-md {
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9" ;
+         }
+      @include md {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9" ;
+      }
+      @include sm {
+         grid-template-columns: repeat(1, 1fr);
+         grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+         padding: $gap / 2 $gap / 2;
+         grid-gap: $gap;
+         
+      }
+   }
+   &-item {
+      position: relative;
+      display: grid;
+      overflow: hidden;
+      
+      
+      &__overlay {
+         background-color: $color-primary;
+         @include zeroes-pos;
+         z-index: 1;
+         opacity: 0.8;
+         transition: opacity 0.5s;
+
+         &:hover {
+            opacity: 0.95 !important; 
+         }
+     }
+   &__image {
+      @include zeroes-pos;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform 0.5s;
+      }
+   &__title {
+      @include zeroes-pos;
+      color: $color-light;
+      z-index: 2;
+      font-size: 1.25rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin: 0;
+      @include md {
+         font-size: 1.125rem;
+         }
+      
+      }
+      &__link {
+         display: flex;
+         @include zeroes-pos;
+         align-items: center;
+         justify-content: center;
+         color: $color-light;
+         transition: color 0.5s;
+         height: 100%;
+         padding: $gap;
+     }
+
+     &:hover {
+      .skill-item__overlay {
+        opacity: 0.95 !important;
+      }
+  
+      .skill-item__image {
+        transform: scale(1.1);
+      }
+  
+      .skill-item__link {
+        color: $color-accent;
+      }
+    }
+   }
+   &-button {
+      justify-content: center;
+      
+      @include sm-min {
+      display: flex;
+      padding: 0 10px;
+      }
+      @include sm {
+         padding: 0 10px;
+         }
+  }
+  &-btn {
+   display: block;
+   border: 2px solid;
+   border-color: $color-primary;
+   font-size: 1.125rem;
+   background-color: rgba(45, 54, 81, 0.8);
+   letter-spacing: 0.1em;
+   line-height: 56px;
+   text-align: center;
+   margin: 20px 0 0 0;
+   transition: background-color 0.5s;
+
+   &:hover{
+      background-color: $color-accent;
+   }
+   
+   @include sm-min {
+      min-width: 350px;
+   }
+   @include sm {
+      margin-top: 10px;
+      margin-bottom: 10px;
+   }
+   
+   }
+}
+
+@for $i from 1 through 9 {
+   .skill-item:nth-of-type(#{$i}) {
+      grid-area: a#{$i};
+    }
+   }

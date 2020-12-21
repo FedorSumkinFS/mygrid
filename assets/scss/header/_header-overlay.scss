@@ -1,0 +1,5 @@
+.header-overlay {
+    background-color: $color-primary;
+    @include zeroes-pos;
+    opacity: 0.8;
+}

@@ -1,0 +1,11 @@
+.header-logo {
+    font-size: 1.5rem;
+    letter-spacing: 0.22em;
+
+    &__span {
+    border: 3px solid $color-highlight;
+    padding: 14px 0px 13px 6px;
+    margin-right: 4px;
+    display: inline-block;
+        }
+    }

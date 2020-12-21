@@ -1,0 +1,51 @@
+.footer {
+    background-color: $color-primary;
+    text-align: center;
+    padding: 49px 20px 70px;
+    
+    &-container {
+        @extend %container;
+    }
+    &-social {
+        position: relative;
+        display: grid;
+        justify-content: center;
+        margin-bottom: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+                                         
+    &::after{
+        position: absolute;
+        width: 75px;
+        height: 2px;
+        bottom: -20px;
+        left: calc(50% - 75px / 2);
+        content: "";
+        background-color: rgba(255, 255, 255, 0.1);
+            }
+    a {
+        padding: 9px 7px 10px 10px;
+    }
+
+
+    }
+    &-bottom {
+        font-size: 1rem;
+        font-family: $font-main;
+
+    &__title{
+        font-weight: 200;
+        color: $color-gray;
+        letter-spacing: 0.33em;
+        margin-right: -0.5em;
+            }
+
+    &__text{
+        font-weight: bold;
+        letter-spacing: 0.05em;
+            }
+    }
+
+.fab {
+    font-size: 36px;
+    }
+}
