@@ -1104,6 +1104,10 @@ html {
   transition: background-color 0.5s;
 }
 
+.posts-btn:hover {
+  background-color: #d66926;
+}
+
 .posts-item__image {
   background-size: cover;
   background-position: center;
@@ -1172,6 +1176,17 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 }
 
+.footer-social a {
+  padding: 11px 7px 10px 10px;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.footer-social a:hover {
+  color: #d66926;
+}
+
 .footer-social::after {
   position: absolute;
   width: 75px;
@@ -1180,10 +1195,6 @@ img {
   left: calc(50% - 75px / 2);
   content: "";
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer-social a {
-  padding: 9px 7px 10px 10px;
 }
 
 .footer-bottom {
