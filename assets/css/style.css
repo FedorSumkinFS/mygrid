@@ -711,15 +711,14 @@ html {
 }
 
 .skill-container {
-  grid-gap: 10px;
   display: grid;
-  grid-auto-rows: calc(33.333vh - 13.333px);
 }
 
 .skill-item {
   position: relative;
   display: grid;
   overflow: hidden;
+  min-height: calc(33.33vh - 13.333px);
 }
 
 .skill-item__overlay {
@@ -734,10 +733,6 @@ html {
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
-}
-
-.skill-item__overlay:hover {
-  opacity: 0.95 !important;
 }
 
 .skill-item__image {
@@ -765,9 +760,11 @@ html {
   color: #ffffff;
   z-index: 2;
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 0.1em;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 20;
 }
 
 .skill-item__link {
@@ -868,8 +865,11 @@ html {
   grid-area: a9;
 }
 
-.about-container {
+.about {
   background-color: #e5e5e5;
+}
+
+.about-container {
   display: grid;
   grid-template-columns: 1fr 271px;
 }
@@ -1012,6 +1012,7 @@ html {
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
   height: 60px;
+  cursor: pointer;
 }
 
 .form-input__btn:hover {
@@ -1266,6 +1267,7 @@ img {
     margin: 0 0 53px;
   }
   .skill-container {
+    grid-gap: 10px;
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     grid-template-columns: repeat(4, 1fr);
   }
@@ -1280,9 +1282,6 @@ img {
   }
   .about-wrapper__text {
     font-size: 1.125rem;
-  }
-  .form-input__btn {
-    max-width: 350px;
   }
   .posts-title {
     padding-bottom: 56px;
@@ -1315,6 +1314,7 @@ img {
 
 @media (max-width: 991.8px) and (min-width: 768px) {
   .skill-container {
+    grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
@@ -1373,9 +1373,6 @@ img {
   .skill-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
-  }
-  .skill-item__title {
-    font-size: 1.125rem;
   }
   .about-container {
     grid-template-columns: 1fr 236px;

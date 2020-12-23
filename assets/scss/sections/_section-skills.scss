@@ -6,14 +6,15 @@
     }
 
     &-container {
-      grid-gap: $gap / 2;
-      display: grid;
-      grid-auto-rows: calc(33.333vh - 13.333px);
-      @include lg-min {
+       display: grid;
+       // grid-auto-rows: calc(33.333vh - 13.333px);
+       @include lg-min {
+         grid-gap: $gap / 2;
          grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6" ;
          grid-template-columns: repeat(4, 1fr);
-         }
+      }
       @include lg-md {
+         grid-gap: $gap / 2;
          grid-template-columns: repeat(3, 1fr);
          grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9" ;
          }
@@ -33,7 +34,7 @@
       position: relative;
       display: grid;
       overflow: hidden;
-      
+      min-height: calc(33.33vh - 13.333px);
       
       &__overlay {
          background-color: $color-primary;
@@ -42,9 +43,6 @@
          opacity: 0.8;
          transition: opacity 0.5s;
 
-         &:hover {
-            opacity: 0.95 !important; 
-         }
      }
    &__image {
       @include zeroes-pos;
@@ -58,12 +56,11 @@
       color: $color-light;
       z-index: 2;
       font-size: 1.25rem;
-      font-weight: bold;
+      font-weight: 700;
       letter-spacing: 0.1em;
       margin: 0;
-      @include md {
-         font-size: 1.125rem;
-         }
+      font-family: $font-main;
+      line-height: 20;
       
       }
       &__link {

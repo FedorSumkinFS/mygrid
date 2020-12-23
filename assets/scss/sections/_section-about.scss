@@ -1,7 +1,7 @@
 .about {
+    background-color: $color-gray-light;
     &-container {
       
-        background-color: $color-gray-light;
         @extend %container;
         display: grid;
         grid-template-columns: 1fr 271px;

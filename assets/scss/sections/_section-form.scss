@@ -61,15 +61,10 @@
             letter-spacing: 0.1em;
             transition: background-color 0.5s, border-color 0.5s;
             height: 60px;
+            cursor: pointer;
             &:hover {
                 border-color: #fff;
                 background-color: $color-accent;
-            }
-            @include lg-min {
-                max-width: 350px;
-            }
-            @include md {
-                
             }
         }
     }
