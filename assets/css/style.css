@@ -712,13 +712,14 @@ html {
 
 .skill-container {
   display: grid;
+  grid-gap: 10px;
 }
 
 .skill-item {
   position: relative;
   display: grid;
   overflow: hidden;
-  min-height: calc(33.33vh - 13.333px);
+  min-height: calc(33.33vh - 13.2px);
 }
 
 .skill-item__overlay {
@@ -759,7 +760,6 @@ html {
   bottom: 0;
   color: #ffffff;
   z-index: 2;
-  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   margin: 0;
@@ -1251,6 +1251,9 @@ img {
   .header-navbar__btn {
     display: none;
   }
+  .skill-item__title {
+    font-size: 1.25rem;
+  }
   .form-input {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1267,7 +1270,6 @@ img {
     margin: 0 0 53px;
   }
   .skill-container {
-    grid-gap: 10px;
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     grid-template-columns: repeat(4, 1fr);
   }
@@ -1314,7 +1316,6 @@ img {
 
 @media (max-width: 991.8px) and (min-width: 768px) {
   .skill-container {
-    grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
@@ -1373,6 +1374,9 @@ img {
   .skill-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+  }
+  .skill-item__title {
+    font-size: 1.125rem;
   }
   .about-container {
     grid-template-columns: 1fr 236px;
