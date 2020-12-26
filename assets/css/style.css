@@ -719,7 +719,6 @@ html {
   position: relative;
   display: grid;
   overflow: hidden;
-  min-height: calc(33.33vh - 13.2px);
 }
 
 .skill-item__overlay {
@@ -1247,6 +1246,12 @@ img {
   }
 }
 
+@media (min-height: 691px) {
+  .skill-item {
+    min-height: calc(33.33vh - 20px * 0.66);
+  }
+}
+
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -1411,6 +1416,12 @@ img {
   }
   .form-item:nth-of-type(1) {
     grid-column: 1 / span 2;
+  }
+}
+
+@media (max-height: 690px) {
+  .skill-item {
+    min-height: calc(230px - 20px * 0.66);
   }
 }
 
